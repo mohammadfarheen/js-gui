@@ -18,18 +18,17 @@ ra<!doctype html>
     <h1>Given temp in C,display temp in K </h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <p>Enter your name:
-      <input id="guest" type="text" value="farheen">
+   <p>Enetr your name:
+      <input id="name" type="text" value="farheen ">
+
+    <p> degC:
+      <input id="fisrtNumber" type="number" value="540 ">
+    </p>
+      <p>  enter degC:
+      <input id="secondNumber" type="number" value="720">
     </p>
 
-    <p>Enter number:
-      <input id="number" type="number" value="540">
-    </p>
-
-    <p>Enter second number:
-      <input id="Celcius" type="degC" value="273">
-    </p>
-
+    
     <button id="clicker" class="btn btn-primary">Convert temp in K</button>
 
     <p id="result"></p>
@@ -42,7 +41,7 @@ ra<!doctype html>
     console.log('Declare testable functions.....................')
 
     function convert(x, y) {
-      return x-y
+      return degC-273.5
     }
     console.log('Defined convert=' + convert)
 
@@ -50,11 +49,11 @@ ra<!doctype html>
 
     document.getElementById('clicker').addEventListener('click', function () {
       const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('number').value)
+      const i = parseInt(document.getElementById('degC').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('Celsius').value)
+      const j = parseInt(document.getElementById('enter degC').value)
       console.log('j=' + j)
-      const ans = s + ', your conversion of temp in K ' + convert(i, j) + '.'
+      const ans = s + ', your conversion of temp in K ' + convert(i,273.5) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
