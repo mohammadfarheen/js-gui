@@ -17,6 +17,11 @@ ra<!doctype html>
 
     <h1>Given radius, display area </h1>
     <h3>Right-click / Inspect, then select console</h3>
+    
+    <p>Enter your name:
+      <input id="guest" type="text" value="Eden">
+    </p>
+
 
    
     <p> radius
@@ -44,11 +49,12 @@ ra<!doctype html>
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
+      const s = document.getElementById('guest').value
      
       const i = parseInt(document.getElementById('radius').value)
       console.log('i=' + i)
     
-      const ans =  your conversion of temp in K ' + area(x) + '.'
+      const ans = s + ', your area is ' + area(i) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
