@@ -2,7 +2,7 @@ ra<!doctype html>
 <html lang="en">
 
 <head>
-  <title>Temperature Converter</title>
+  <title>Area Calculator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -15,21 +15,17 @@ ra<!doctype html>
 <body>
   <main class="container-fluid">
 
-    <h1>Given temp in C,display temp in K </h1>
+    <h1>Given radius, display area </h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-   <p>Enetr your name:
-      <input id="name" type="text" value="farheen ">
-
-    <p> degC:
-      <input id="fisrtNumber" type="number" value="540 ">
+   
+    <p> radius
+      <input id="radius" type="number" value="3 ">
     </p>
-      <p>  enter degC:
-      <input id="secondNumber" type="number" value="720">
-    </p>
+     
 
     
-    <button id="clicker" class="btn btn-primary">Convert temp in K</button>
+    <button id="clicker" class="btn btn-primary">Calculate Area</button>
 
     <p id="result"></p>
 
@@ -40,20 +36,19 @@ ra<!doctype html>
 
     console.log('Declare testable functions.....................')
 
-    function convert(x, y) {
-      return degC-273.5
+    function area(x) {
+      return Math.PI * radius * radius
     }
     console.log('Defined convert=' + convert)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('degC').value)
+     
+      const i = parseInt(document.getElementById('radius').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('enter degC').value)
-      console.log('j=' + j)
-      const ans = s + ', your conversion of temp in K ' + convert(i,273.5) + '.'
+    
+      const ans =  your conversion of temp in K ' + area(x) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
